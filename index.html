@@ -1,5 +1,3 @@
-<!-- This is the project page. -->
-
 <html>
 	<head>
 		<title>Thanks.</title>
@@ -25,12 +23,15 @@
 				if (window.location.hash != "") {
 					whichImage = parseInt(window.location.hash.substring(1));
 					if (whichImage == "NaN" || whichImage > theImages.length || whichImage < 1) {
+						// Invalid hash
 						window.location.hash = "";
 						whichImage = Math.floor(Math.random() * theImages.length);
 					} else {
+						// Fix the index
 						whichImage--;
 					}
 				} else {
+					// Generate random
 					whichImage = Math.floor(Math.random() * theImages.length);
 				}
 

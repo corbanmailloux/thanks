@@ -21,7 +21,16 @@
 			];
 
 			function showImage(){
-				var whichImage = Math.floor(Math.random() * theImages.length);
+				var whichImage;
+				if (window.location.hash != "") {
+					whichImage = parseInt(window.location.hash.substring(1));
+					if (whichImage == "NaN" || whichImage > theImages.length || whichImage < 1) {
+						whichImage = Math.floor(Math.random() * theImages.length);
+					}
+				} else {
+					whichImage = Math.floor(Math.random() * theImages.length);
+				}
+
 				document.write('<img class="gfyitem" data-id="' + theImages[whichImage] + '" alt="Thanks">');
 			}
 		</script>

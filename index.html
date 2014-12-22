@@ -35,7 +35,10 @@
 					whichImage = Math.floor(Math.random() * theImages.length);
 				}
 
+				var url = "http://thanks.corb.co/#" + (whichImage + 1).toString();
+
 				document.write('<img class="gfyitem" data-id="' + theImages[whichImage] + '" alt="Thanks">');
+				document.write('<p>To link directly to this image, go to <a href="' + url + '">' + url + '</a>.</p>');
 			}
 		</script>
 	</head>

@@ -27,6 +27,8 @@
 					if (whichImage == "NaN" || whichImage > theImages.length || whichImage < 1) {
 						window.location.hash = "";
 						whichImage = Math.floor(Math.random() * theImages.length);
+					} else {
+						whichImage--;
 					}
 				} else {
 					whichImage = Math.floor(Math.random() * theImages.length);

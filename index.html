@@ -5,8 +5,6 @@
 
 		<title>Thanks.</title>
 
-		<!-- Using the new test gfycat code, to allow video embedding on mobile. -->
-		<script type"text/javascript" src="http://test.gfycat.com/gfycat_test_june25.js"></script>
 		<script language="JavaScript">
 			// gfycat data IDs
 			var theImages = [
@@ -41,7 +39,7 @@
 
 				var url = "http://thanks.corb.co/#" + (whichImage + 1).toString();
 
-				document.write('<img class="gfyitem" data-controls=true data-expand=false data-id="' + theImages[whichImage] + '" alt="Loading...">');
+				document.write("<div style='position:relative;padding-bottom:42%'><iframe src='https://gfycat.com/ifr/" + theImages[whichImage] + "' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>");
 				document.write('<p>To link directly to this page, go to <a href="' + url + '">' + url + '</a>.</p>');
 				document.write('<p>Find this image on <a href="https://gfycat.com/' + theImages[whichImage] + '">gfycat</a>.</p>');
 			}
